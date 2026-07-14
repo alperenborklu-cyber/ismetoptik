@@ -16,10 +16,10 @@ export const LensSimulator: React.FC = () => {
     <section className="lens-simulator-section" id="lens-tech">
       <div className="container">
         <div className="section-header">
-          <span className="subtitle">Interactive Lens Technology</span>
-          <h2 className="title-serif">See the Difference in Premium Glass</h2>
+          <span className="subtitle">İnteraktif Cam Teknolojisi</span>
+          <h2 className="title-serif">Premium Cam Kalitesini Keşfedin</h2>
           <p className="description">
-            We partner with world-leaders like ZEISS and Essilor to provide clinical-grade vision solutions tailored to your life.
+            Dünya lideri ZEISS gibi markalarla iş ortaklığı kurarak yaşam tarzınıza ve göz sağlığınıza uygun en kaliteli cam çözümlerini sunuyoruz.
           </p>
         </div>
 
@@ -39,10 +39,10 @@ export const LensSimulator: React.FC = () => {
                 <div className="scene-content">
                   <div className="scene-card">
                     <h4>Ankara Ulus</h4>
-                    <p>İsmet Optik Storefront View</p>
+                    <p>İsmet Optik Mağaza Görünümü</p>
                   </div>
                   <div className="scene-badge">
-                    {blueLight ? 'Blue Cut Filter ON' : 'Standard Lens'}
+                    {blueLight ? 'Mavi Işık Filtresi AÇIK' : 'Standart Cam'}
                   </div>
                 </div>
               </div>
@@ -53,19 +53,19 @@ export const LensSimulator: React.FC = () => {
                 className={`control-btn ${blueLight ? 'active' : ''}`}
                 onClick={() => setBlueLight(!blueLight)}
               >
-                Blue Light Filter {blueLight ? 'ON' : 'OFF'}
+                Mavi Işık Filtresi {blueLight ? 'AÇIK' : 'KAPALI'}
               </button>
               <button 
                 className={`control-btn ${antiReflective ? 'active' : ''}`}
                 onClick={() => setAntiReflective(!antiReflective)}
               >
-                Anti-Reflective {antiReflective ? 'ON' : 'OFF'}
+                Antirefle Kaplama {antiReflective ? 'AÇIK' : 'KAPALI'}
               </button>
               <button 
                 className={`control-btn ${transitions ? 'active' : ''}`}
                 onClick={() => setTransitions(!transitions)}
               >
-                Transitions (UV Tint) {transitions ? 'ON' : 'OFF'}
+                Transitions (UV Uyumlu) {transitions ? 'AÇIK' : 'KAPALI'}
               </button>
             </div>
           </div>
@@ -77,41 +77,41 @@ export const LensSimulator: React.FC = () => {
                 className={`tab-link ${activeTab === 'coatings' ? 'active' : ''}`}
                 onClick={() => setActiveTab('coatings')}
               >
-                Lens Coatings
+                Cam Kaplamaları
               </button>
               <button 
                 className={`tab-link ${activeTab === 'tech' ? 'active' : ''}`}
                 onClick={() => setActiveTab('tech')}
               >
-                Specialty Lenses
+                Özel Cam Çözümleri
               </button>
             </div>
 
             <div className="tabs-content">
               {activeTab === 'coatings' ? (
                 <div className="tab-pane animate-fade-in">
-                  <h3>Enhance Your Vision Coatings</h3>
-                  <p className="tab-intro">Customize your glasses with advanced protective treatments.</p>
+                  <h3>Görüş Kalitenizi Artıran Kaplamalar</h3>
+                  <p className="tab-intro">Gözlüklerinizi gelişmiş koruyucu kaplamalarla kişiselleştirin.</p>
                   <div className="coatings-list">
                     <div className="coating-item">
                       <div className="coating-dot blue-dot"></div>
                       <div>
-                        <h4>BlueCut™ Screen Protection</h4>
-                        <p>Neutralizes high-energy blue light from smartphones and laptops. Prevents eye strain and improves sleep cycle.</p>
+                        <h4>BlueCut™ Ekran Koruması</h4>
+                        <p>Akıllı telefonlar ve bilgisayarlardan gelen zararlı mavi ışığı engeller. Göz yorgunluğunu önler ve uyku kalitesini artırır.</p>
                       </div>
                     </div>
                     <div className="coating-item">
                       <div className="coating-dot reflection-dot"></div>
                       <div>
-                        <h4>DuraVision® Premium Anti-Reflective</h4>
-                        <p>Eliminates 99% of surface reflections. Crucial for night driving safety and pure cosmetic frame transparency.</p>
+                        <h4>DuraVision® Premium Antirefle</h4>
+                        <p>Yüzey yansımalarını %99 oranında yok eder. Gece sürüş güvenliği ve berrak çerçeve görünümü için vazgeçilmezdir.</p>
                       </div>
                     </div>
                     <div className="coating-item">
                       <div className="coating-dot uv-dot"></div>
                       <div>
-                        <h4>Photochromic Transitions®</h4>
-                        <p>Lenses darken automatically when exposed to sunlight, changing from clear indoor glasses to dark outdoor sunglasses.</p>
+                        <h4>Fotokromik Transitions®</h4>
+                        <p>Güneş ışığına maruz kaldığında otomatik olarak koyulaşır; iç mekanda berrak, dış mekanda ise güneş gözlüğü işlevi görür.</p>
                       </div>
                     </div>
                   </div>
@@ -135,7 +135,7 @@ export const LensSimulator: React.FC = () => {
                     <p className="tech-description">{currentTech.description}</p>
                     
                     <div className="tech-benefits">
-                      <h4>Key Benefits:</h4>
+                      <h4>Öne Çıkan Faydaları:</h4>
                       <ul>
                         {currentTech.benefits.map((benefit, idx) => (
                           <li key={idx}>{benefit}</li>

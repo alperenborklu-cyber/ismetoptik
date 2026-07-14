@@ -23,60 +23,60 @@ export const products: Product[] = [
     name: 'Aero Gold Aviator',
     category: 'sunglasses',
     price: '₺7,450',
-    description: 'Ultra-lightweight 24k gold-plated titanium frame featuring signature geometric gradient lenses. Designed for fashion-forward statements.',
-    image: 'sunglasses-hero', // points to the luxury hero asset
-    tag: 'Trending',
-    specs: ['100% UVA/UVB Protection', 'Titanium Frame', 'Anti-reflective Inner Coating']
+    description: 'Özel geometrik geçişli camlara sahip, 24 ayar altın kaplama ultra hafif titanyum çerçeve. Moda tutkunları için tasarlandı.',
+    image: 'sunglasses-hero',
+    tag: 'Popüler',
+    specs: ['%100 UVA/UVB Koruması', 'Titanyum Çerçeve', 'İç Yüzey Antirefle Kaplama']
   },
   {
     id: 'sg-2',
     name: 'Obsidian Monolith',
     category: 'sunglasses',
     price: '₺6,890',
-    description: 'Bold acetate frame with thick bevelled edges and polarized dark charcoal lenses. A masterful blend of mystery and modernism.',
+    description: 'Kalın eğimli kenarları ve polarize koyu kömür grisi camlarıyla cesur asetat çerçeve. Gizem ve modernizmin mükemmel uyumu.',
     image: 'obsidian-monolith',
-    tag: 'Limited Edition',
-    specs: ['Polarized Lenses', 'Premium Italian Acetate', 'Handcrafted in Italy']
+    tag: 'Sınırlı Üretim',
+    specs: ['Polarize Camlar', 'Premium İtalyan Asetat', 'İtalya\'da El Yapımı']
   },
   {
     id: 'sg-3',
     name: 'Siena Cat-Eye',
     category: 'sunglasses',
     price: '₺5,900',
-    description: 'Chic upswept silhouette with tortoiseshell detailing and warm amber gradient lenses. Elegance reimagined.',
+    description: 'Kaplumbağa kabuğu desen detayları ve sıcak kehribar geçişli camlara sahip şık kedi gözü tasarımı. Zarafet yeniden tanımlandı.',
     image: 'siena-cateye',
-    tag: 'New Collection',
-    specs: ['Scratch-Resistant Lenses', 'Flexible Spring Hinges', 'Includes Premium Leather Case']
+    tag: 'Yeni Sezon',
+    specs: ['Çizilmeye Dayanıklı Camlar', 'Esnek Yaylı Menteşeler', 'Premium Deri Kılıf Dahil']
   },
   {
     id: 'op-1',
     name: 'Metropolitan Crystal',
     category: 'optical',
     price: '₺4,200',
-    description: 'Minimalist crystal-clear transparent frame crafted from durable TR90. The perfect modern companion for professional settings.',
-    image: 'optical-glasses', // points to the Travertine stone shot
-    tag: 'Best Seller',
-    specs: ['TR90 Ultralight Polymer', 'Blue-light blocking ready', 'Ergonomic Keyhole Bridge']
+    description: 'Dayanıklı TR90 malzemeden üretilmiş minimalist şeffaf çerçeve. Profesyonel ortamlar için mükemmel bir modern yol arkadaşı.',
+    image: 'optical-glasses',
+    tag: 'En Çok Satan',
+    specs: ['TR90 Ultra Hafif Polimer', 'Mavi Işık Filtresi Uyumlu', 'Ergonomik Anahtar Deliği Köprü']
   },
   {
     id: 'op-2',
     name: 'Ankara Classic Round',
     category: 'optical',
     price: '₺4,850',
-    description: 'Timeless round frame pairing brushed silver temples with a matte black rim. Sleek, artistic, and lightweight.',
+    description: 'Fırçalanmış gümüş saplar ile mat siyah çerçevenin zamansız birleşimi. Şık, sanatsal ve son derece hafif.',
     image: 'ankara-round',
-    tag: 'Classic',
-    specs: ['Stainless Steel & Acetate', 'Adjustable Silicone Nosepads', 'Highly flexible temples']
+    tag: 'Klasik',
+    specs: ['Paslanmaz Çelik ve Asetat', 'Ayarlanabilir Silikon Burun Pedleri', 'Yüksek Esneklikte Saplar']
   },
   {
     id: 'op-3',
     name: 'Linear Titanium Square',
     category: 'optical',
     price: '₺8,100',
-    description: 'Sophisticated rimless structure with minimalist matte gold bridges and temple arms. Pure comfort and absolute prestige.',
+    description: 'Minimalist mat altın köprü ve saplara sahip sofistike çerçevesiz yapı. Saf konfor ve mutlak prestij.',
     image: 'titanium-square',
     tag: 'Premium',
-    specs: ['Pure Japanese Titanium', 'Ultralight (9 grams)', 'Hypoallergenic Materials']
+    specs: ['Saf Japon Titanyumu', 'Ultra Hafif (9 gram)', 'Hipoalerjenik Malzeme']
   }
 ];
 
@@ -84,31 +84,31 @@ export const lensTechs: LensTech[] = [
   {
     id: 'zeiss-myocare',
     name: 'ZEISS MyoCare',
-    description: 'Clinically proven lens design specifically optimized for slowing down myopia progression in young eyes while delivering crisp vision.',
+    description: 'Genç gözlerde miyopi ilerlemesini yavaşlatırken aynı zamanda net görüş sunmak üzere klinik olarak kanıtlanmış özel cam tasarımı.',
     benefits: [
-      'Slows down eye elongation by up to 63%',
-      'Maximum optical clarity in the center',
-      'Full UV Protection in clear lenses'
+      'Göz uzamasını %63\'e varan oranda yavaşlatır',
+      'Merkezde maksimum optik netlik sağlar',
+      'Şeffaf camlarda tam UV koruması sunar'
     ],
     features: [
-      { name: 'Technology', value: 'Cylindrical Annular Refractive Elements (C.A.R.E.)' },
-      { name: 'Target Group', value: 'Children & Teenagers' },
-      { name: 'Coating', value: 'DuraVision Premium Coating' }
+      { name: 'Teknoloji', value: 'Silindirik Halka Şekilli Kırılma Elemanları (C.A.R.E.)' },
+      { name: 'Hedef Kitle', value: 'Çocuklar ve Gençler' },
+      { name: 'Kaplama', value: 'DuraVision Premium Kaplama' }
     ]
   },
   {
     id: 'progressive-max',
     name: 'Zeiss Progressive Individual',
-    description: 'Tailor-made multifocal lenses adapting to your specific posture, professional environment, and physiological reading distance.',
+    description: 'Duruşunuza, profesyonel çalışma ortamınıza ve fizyolojik okuma mesafenize özel olarak uyarlanan kişiye özel progresif camlar.',
     benefits: [
-      'Seamless transition between near, intermediate, and far vision',
-      'Elimination of "swim effect" and peripheral distortions',
-      'Optimized digital screen comfort'
+      'Yakın, orta ve uzak görüş arasında kesintisiz geçiş',
+      'Yüzme hissi ve çevresel dalgalanmaların ortadan kaldırılması',
+      'Optimize edilmiş dijital ekran konforu'
     ],
     features: [
-      { name: 'Customization', value: 'Individualized FaceFit Parameters' },
-      { name: 'Optimization', value: 'Digital Inside Technology' },
-      { name: 'Visual Field', value: 'Up to 40% wider vision field' }
+      { name: 'Kişiselleştirme', value: 'Bireysel FaceFit Parametreleri' },
+      { name: 'Optimizasyon', value: 'Digital Inside Teknolojisi' },
+      { name: 'Görüş Alanı', value: '%40\'a varan daha geniş görüş alanı' }
     ]
   }
 ];

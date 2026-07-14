@@ -21,13 +21,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onBookTryOn }
     if (product.image === 'sunglasses-hero' || product.image === 'optical-glasses') {
       return '';
     }
-    // Return a stylish stylized CSS card fallback
     return 'fallback-card-style';
   };
 
   const handleWhatsAppInquiry = () => {
     const message = encodeURIComponent(
-      `Hello İsmet Optik, I am interested in checking availability for the "${product.name}" (${product.category}) frame. Could you please provide more information?`
+      `Merhaba İsmet Optik, "${product.name}" (${product.category === 'sunglasses' ? 'Güneş Gözlüğü' : 'Optik'}) modeliniz hakkında stok ve fiyat bilgisi alabilir miyim?`
     );
     window.open(`https://wa.me/905423245712?text=${message}`, '_blank');
   };
@@ -60,7 +59,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onBookTryOn }
 
       <div className="card-details">
         <div className="card-header-info">
-          <span className="card-category">{product.category.toUpperCase()}</span>
+          <span className="card-category">
+            {product.category === 'sunglasses' ? 'GÜNEŞ GÖZLÜĞÜ' : 'OPTİK GÖZLÜK'}
+          </span>
           <span className="card-price">{product.price}</span>
         </div>
         <h3 className="product-title">{product.name}</h3>
@@ -77,13 +78,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onBookTryOn }
             onClick={() => onBookTryOn(product)} 
             className="btn-secondary btn-sm"
           >
-            Reserve Try-On
+            Mağazada Dene
           </button>
           <button 
             onClick={handleWhatsAppInquiry} 
             className="btn-primary btn-whatsapp btn-sm"
           >
-            WhatsApp Inquiry
+            WhatsApp Bilgi
           </button>
         </div>
       </div>
