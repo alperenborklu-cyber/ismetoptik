@@ -574,6 +574,8 @@ h1, h2, h3, h4, .title-serif {
 .section-header {
   max-width: 750px;
   margin-bottom: 70px;
+  padding-left: 24px;
+  border-left: 2px solid var(--color-primary);
 }
 
 .section-header h2 {
@@ -981,6 +983,11 @@ h1, h2, h3, h4, .title-serif {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
+}
+
+.location-details {
+  padding-left: 24px;
+  border-left: 2px solid var(--color-primary);
 }
 
 .loc-intro {
