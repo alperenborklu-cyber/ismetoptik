@@ -424,6 +424,9 @@ h1, h2, h3, h4, .title-serif {
   border-radius: 16px;
   overflow: hidden;
   transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .product-card:hover {
@@ -504,6 +507,9 @@ h1, h2, h3, h4, .title-serif {
 
 .card-details {
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .card-header-info {
@@ -562,6 +568,7 @@ h1, h2, h3, h4, .title-serif {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
+  margin-top: auto;
 }
 
 /* Lens Simulator Section */
