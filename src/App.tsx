@@ -1,14 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { products, type Product } from './data/products';
 import { ProductCard } from './components/ProductCard';
 import { LensSimulator } from './components/LensSimulator';
+
+// Import hero loop model images
+import luxurySunglasses from './assets/luxury_sunglasses_hero.png';
 import luxuryEyeglassesModel from './assets/luxury_eyeglasses_model.png';
+import modelSunglasses2 from './assets/model_sunglasses_2.png';
+import modelEyeglasses2 from './assets/model_eyeglasses_2.png';
+import modelSunglasses3 from './assets/model_sunglasses_3.png';
+import modelEyeglasses3 from './assets/model_eyeglasses_3.png';
+import modelSunglasses4 from './assets/model_sunglasses_4.png';
+
+const HERO_IMAGES = [
+  { src: luxurySunglasses, alt: 'Lüks Güneş Gözlüğü Modeli' },
+  { src: luxuryEyeglassesModel, alt: 'Lüks Optik Gözlük Modeli' },
+  { src: modelSunglasses2, alt: 'Premium Güneş Gözlüğü Tasarımı' },
+  { src: modelEyeglasses2, alt: 'Modern Optik Çerçeve Modeli' },
+  { src: modelSunglasses3, alt: 'Avangart Güneş Gözlüğü' },
+  { src: modelEyeglasses3, alt: 'Zarif Metal Gözlük Çerçevesi' },
+  { src: modelSunglasses4, alt: 'Klasik Havacı Güneş Gözlüğü' }
+];
 
 export default function App() {
   const [activeCategory, setActiveCategory] = useState<'all' | 'sunglasses' | 'optical'>('all');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [bookingProduct, setBookingProduct] = useState<Product | null>(null);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
+  
+  // Auto-play interval for hero slideshow
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveSlide(prev => (prev + 1) % HERO_IMAGES.length);
+    }, 3800);
+    return () => clearInterval(timer);
+  }, []);
   
   // Form state
   const [formData, setFormData] = useState({
@@ -119,12 +146,26 @@ export default function App() {
 
           <div className="hero-visual">
             <div className="hero-image-wrapper">
-              <img 
-                src={luxuryEyeglassesModel} 
-                alt="Lüks Optik Gözlük Modeli" 
-                className="hero-img-main"
-              />
+              {HERO_IMAGES.map((img, idx) => (
+                <img 
+                  key={idx}
+                  src={img.src} 
+                  alt={img.alt} 
+                  className={`hero-img-main ${activeSlide === idx ? 'slide-active' : ''}`}
+                />
+              ))}
               <div className="hero-image-overlay"></div>
+              {/* Carousel Indicators */}
+              <div className="carousel-indicators">
+                {HERO_IMAGES.map((_, idx) => (
+                  <button 
+                    key={idx}
+                    className={`indicator-dot ${activeSlide === idx ? 'active' : ''}`}
+                    onClick={() => setActiveSlide(idx)}
+                    aria-label={`Slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
               <div className="hero-glass-card glass">
                 <span className="card-label">Şu An Popüler</span>
                 <h4>Aero Gold Aviator</h4>
