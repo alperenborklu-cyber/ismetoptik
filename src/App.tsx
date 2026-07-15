@@ -166,15 +166,6 @@ export default function App() {
                   />
                 ))}
               </div>
-              <div className="hero-glass-card glass">
-                <span className="card-label">Şu An Popüler</span>
-                <h4>Aero Gold Aviator</h4>
-                <p>Sınırlı Sayıda Titanyum Koleksiyonu</p>
-                <div className="card-row">
-                  <span className="price">₺7,450</span>
-                  <button onClick={() => handleOpenBooking(products[0])} className="card-cta">Rezerve Et</button>
-                </div>
-              </div>
             </div>
           </div>
         </div>
