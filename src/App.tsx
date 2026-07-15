@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { products, type Product } from './data/products';
 import { ProductCard } from './components/ProductCard';
 import { LensSimulator } from './components/LensSimulator';
-import luxurySunglasses from './assets/luxury_sunglasses_hero.png';
+import luxuryEyeglassesModel from './assets/luxury_eyeglasses_model.png';
 
 export default function App() {
   const [activeCategory, setActiveCategory] = useState<'all' | 'sunglasses' | 'optical'>('all');
@@ -120,8 +120,8 @@ export default function App() {
           <div className="hero-visual">
             <div className="hero-image-wrapper">
               <img 
-                src={luxurySunglasses} 
-                alt="Lüks Güneş Gözlüğü Modeli" 
+                src={luxuryEyeglassesModel} 
+                alt="Lüks Optik Gözlük Modeli" 
                 className="hero-img-main"
               />
               <div className="hero-image-overlay"></div>
